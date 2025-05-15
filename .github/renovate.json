@@ -12,7 +12,15 @@
             "matchPackageNames": [
                 "composer/composer"
             ],
-            "enabled": true,
+            "enabled": true
+        },
+        {
+            "matchFileNames": [
+                "lts/Dockerfile"
+            ],
+            "matchPackageNames": [
+                "composer/composer"
+            ],
             "versioning": "semver"
         }
     ],
