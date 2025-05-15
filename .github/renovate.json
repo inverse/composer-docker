@@ -28,8 +28,8 @@
     "customManagers": [
         {
             "customType": "regex",
-            "fileMatch": [
-                "/latest/Dockerfile"
+            "managerFilePatterns": [
+                "/latest/Dockerfile$/"
             ],
             "matchStrings": [
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>\\d+\\.\\d+\\.\\d+)[\"']?\\s+"
@@ -39,8 +39,8 @@
         },
         {
             "customType": "regex",
-            "fileMatch": [
-                "lts/Dockerfile"
+            "managerFilePatterns": [
+                "/lts/Dockerfile$/"
             ],
             "matchStrings": [
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>2\\.\\d+\\.\\d+)[\"']?\\s+"
