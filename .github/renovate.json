@@ -36,7 +36,8 @@
             ],
             "datasourceTemplate": "github-releases",
             "depNameTemplate": "composer/composer",
-            "commitMessageAction": "Latest"
+            "commitMessageAction": "Latest",
+            "groupName": "composer (latest)"
         },
         {
             "customType": "regex",
@@ -48,7 +49,8 @@
             ],
             "datasourceTemplate": "github-releases",
             "depNameTemplate": "composer/composer",
-            "commitMessageAction": "LTS"
+            "commitMessageAction": "LTS",
+            "groupName": "composer (lts)"
         }
     ]
 }
