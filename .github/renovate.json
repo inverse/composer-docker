@@ -24,7 +24,7 @@
             ],
             "versioning": "semver",
             "commitMessageSuffix": " (LTS)",
-            "separateMajorMinor": false
+            "separateMinorPatch" : true
         },
         {
             "matchFileNames": [
@@ -34,7 +34,7 @@
                 "composer/composer"
             ],
             "commitMessageSuffix": " (Latest)",
-            "separateMajorMinor": false
+            "separateMinorPatch" : true
         }
     ],
     "customManagers": [
