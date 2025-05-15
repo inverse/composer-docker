@@ -7,6 +7,15 @@
     "extends": [
         "config:recommended"
     ],
+    "packageRules": [
+        {
+            "matchPackageNames": [
+                "composer/composer"
+            ],
+            "enabled": true,
+            "versioning": "semver"
+        }
+    ],
     "customManagers": [
         {
             "customType": "regex",
@@ -28,12 +37,7 @@
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>2\\.\\d+\\.\\d+)[\"']?\\s+"
             ],
             "datasourceTemplate": "github-releases",
-            "depNameTemplate": "composer/composer",
-            "versioning": "semver"
+            "depNameTemplate": "composer/composer"
         }
-    ],
-    "baseBranches": [
-        "main",
-        "add-renovate"
-  ]
+    ]
 }
