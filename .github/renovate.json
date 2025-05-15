@@ -22,7 +22,19 @@
             "matchPackageNames": [
                 "composer/composer"
             ],
-            "versioning": "semver"
+            "versioning": "semver",
+            "commitMessageSuffix": " (LTS)",
+            "separateMajorMinor": false
+        },
+        {
+            "matchFileNames": [
+                "latest/Dockerfile"
+            ],
+            "matchPackageNames": [
+                "composer/composer"
+            ],
+            "commitMessageSuffix": " (Latest)",
+            "separateMajorMinor": false
         }
     ],
     "customManagers": [
@@ -35,9 +47,7 @@
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>\\d+\\.\\d+\\.\\d+)[\"']?\\s+"
             ],
             "datasourceTemplate": "github-releases",
-            "depNameTemplate": "composer/composer",
-            "commitMessageAction": "Latest",
-            "groupName": "composer (latest)"
+            "depNameTemplate": "composer/composer"
         },
         {
             "customType": "regex",
@@ -48,9 +58,7 @@
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>2\\.\\d+\\.\\d+)[\"']?\\s+"
             ],
             "datasourceTemplate": "github-releases",
-            "depNameTemplate": "composer/composer",
-            "commitMessageAction": "LTS",
-            "groupName": "composer (lts)"
+            "depNameTemplate": "composer/composer"
         }
     ]
 }
