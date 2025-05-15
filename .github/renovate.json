@@ -29,7 +29,7 @@
         {
             "customType": "regex",
             "managerFilePatterns": [
-                "//latest/Dockerfile/"
+                "/latest/Dockerfile$/"
             ],
             "matchStrings": [
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>\\d+\\.\\d+\\.\\d+)[\"']?\\s+"
@@ -40,7 +40,7 @@
         {
             "customType": "regex",
             "managerFilePatterns": [
-                "/lts/Dockerfile/"
+                "/lts/Dockerfile$/"
             ],
             "matchStrings": [
                 "ENV COMPOSER_VERSION=[\"']?(?<currentValue>2\\.\\d+\\.\\d+)[\"']?\\s+"
