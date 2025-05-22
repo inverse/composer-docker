@@ -4,33 +4,21 @@
     "labels": [
         "dependencies"
     ],
-    "extends": [
-        "config:recommended"
-    ],
     "separateMinorPatch": true,
     "packageRules": [
         {
-            "matchPackageNames": [
-                "composer/composer"
-            ],
-            "enabled": true
-        },
-        {
-            "description": "Disables major and minor updates for composer/composer in 2.2",
+            "description": "Configure updates for composer/composer in latest",
             "matchFileNames": [
-                "2.2/Dockerfile"
+                "latest/Dockerfile"
             ],
             "matchPackageNames": [
                 "composer/composer"
             ],
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ],
-            "enabled": false
+            "commitMessageSuffix": " (Latest)",
+            "additionalBranchPrefix": "latest-"
         },
         {
-            "description": "Enables patch updates for composer/composer in 2.2",
+            "description": "Configure updates for composer/composer in 2.2",
             "matchFileNames": [
                 "2.2/Dockerfile"
             ],
@@ -41,18 +29,7 @@
                 "patch"
             ],
             "commitMessageSuffix": " (2.2)",
-            "additionalBranchPrefix": "2.2-",
-            "enabled": true
-        },
-        {
-            "matchFileNames": [
-                "latest/Dockerfile"
-            ],
-            "matchPackageNames": [
-                "composer/composer"
-            ],
-            "commitMessageSuffix": " (Latest)",
-            "additionalBranchPrefix": "latest-"
+            "additionalBranchPrefix": "2.2-"
         }
     ],
     "customManagers": [
