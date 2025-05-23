@@ -10,20 +10,6 @@
     "separateMinorPatch": true,
     "packageRules": [
         {
-            "description": "Disables major and minor updates for composer/composer in 2.2",
-            "matchFileNames": [
-                "2.2/Dockerfile"
-            ],
-            "matchPackageNames": [
-                "composer/composer"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ],
-            "enabled": false
-        },
-        {
             "description": "Configures updates for composer/composer in 2.2",
             "matchFileNames": [
                 "2.2/Dockerfile"
